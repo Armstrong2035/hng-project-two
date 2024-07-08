@@ -10,16 +10,15 @@ export default function Home() {
   return (
     <div style={{ width: "100%" }}>
       <Header />
-
       <Box sx={{ mt: 4 }}>
         <main
           style={{
             display: "flex",
-            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
+          <Filters />
           <ProductList />
         </main>
       </Box>

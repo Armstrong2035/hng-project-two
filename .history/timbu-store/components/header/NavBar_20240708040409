@@ -1,0 +1,92 @@
+"use client";
+import React, { useState } from "react";
+import { AppBar, Tabs, Tab, Typography, Box } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+  },
+  tab: {
+    minWidth: 100,
+    fontWeight: 600,
+  },
+  indicator: {
+    backgroundColor: "#ED8174",
+  },
+}));
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+export default function SimpleTabs() {
+  const classes = useStyles();
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="simple tabs example"
+          classes={{ indicator: classes.indicator }}
+        >
+          <Tab label="Shop" {...a11yProps(0)} className={classes.tab} />
+          <Tab label="Skincare" {...a11yProps(1)} className={classes.tab} />
+          <Tab label="Sets & Kits" {...a11yProps(2)} className={classes.tab} />
+          <Tab label="Make-up" {...a11yProps(3)} className={classes.tab} />
+          <Tab
+            label="Shop by Concerns"
+            {...a11yProps(4)}
+            className={classes.tab}
+          />
+        </Tabs>
+      </AppBar>
+      <TabPanel value={value} index={0}>
+        Shop Content
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        Skincare Content
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        Sets & Kits Content
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        Make-up Content
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        Shop by Concerns Content
+      </TabPanel>
+    </Box>
+  );
+}

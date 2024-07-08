@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <div style={{ width: "100%" }}>
       <Header />
-
       <Box sx={{ mt: 4 }}>
         <main
           style={{
@@ -20,6 +19,7 @@ export default function Home() {
             justifyContent: "center",
           }}
         >
+          <Filters />
           <ProductList />
         </main>
       </Box>

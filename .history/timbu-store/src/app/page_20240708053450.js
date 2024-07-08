@@ -11,6 +11,7 @@ export default function Home() {
     <div style={{ width: "100%" }}>
       <Header />
 
+      <Filters />
       <Box sx={{ mt: 4 }}>
         <main
           style={{
