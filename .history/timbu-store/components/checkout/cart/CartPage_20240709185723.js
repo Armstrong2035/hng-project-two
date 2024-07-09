@@ -57,7 +57,7 @@ export default function CartPage() {
                   justifyContent: "center",
                 }}
               >
-                <Image alt={"door delivery"} src={doorDelivery} />
+                <Image src={doorDelivery} />
                 <Typography>Station pickup</Typography>
               </Box>
 
