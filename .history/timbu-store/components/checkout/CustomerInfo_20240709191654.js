@@ -7,8 +7,8 @@ import {
   RadioGroup,
   FormControlLabel,
   Button,
+  Radio,
 } from "@mui/material";
-import Radio from "@mui/material";
 
 import React from "react";
 
