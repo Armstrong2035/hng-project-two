@@ -64,7 +64,7 @@ export default function Invoice() {
       <Stack
         direction={"row"}
         justifyContent={"space-between"}
-        sx={{ border: "1px solid grey", padding: "10px 10px" }}
+        sx={{ border: "1px solid grey" }}
       >
         <Typography>Subtotal</Typography>
         <Typography>$500</Typography>

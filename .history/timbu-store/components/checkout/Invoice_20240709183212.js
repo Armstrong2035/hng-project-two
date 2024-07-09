@@ -61,11 +61,7 @@ export default function Invoice() {
           </MenuItem>
         ))}
       </TextField>
-      <Stack
-        direction={"row"}
-        justifyContent={"space-between"}
-        sx={{ border: "1px solid grey", padding: "10px 10px" }}
-      >
+      <Stack direction={"row"}>
         <Typography>Subtotal</Typography>
         <Typography>$500</Typography>
       </Stack>

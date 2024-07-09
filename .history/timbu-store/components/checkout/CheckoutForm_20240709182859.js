@@ -83,7 +83,7 @@ export default function CheckoutForm() {
           />
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack>
           <Box sx={{ backgroundColor: "#EEE4E3", padding: "10px 15px" }}>
             <Typography>Payment</Typography>
           </Box>

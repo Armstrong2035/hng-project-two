@@ -17,28 +17,26 @@ import Cart from "./cart/Cart";
 import Invoice from "./Invoice";
 import Promotion from "../header/Promotion";
 import CheckoutForm from "./CheckoutForm";
-import CheckoutNav from "./CheckoutNav";
 export default function CheckOut() {
   return (
     <>
       <Stack alignItems={"center"}>
-        <Container>
-          <CheckoutNav />
-          <Box
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "space-between",
-              padding: "10px 10px",
-              marginTop: "20px",
-              backgroundColor: "#EEE4E3",
-            }}
-            className="heading"
-          >
-            <Typography>Order Summary</Typography>
-            <Typography>Total</Typography>
-          </Box>
+        <Box
+          style={{
+            width: "80%",
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "10px 10px",
+            marginTop: "20px",
+            backgroundColor: "#EEE4E3",
+          }}
+          className="heading"
+        >
+          <Typography>Order Summary</Typography>
+          <Typography>Total</Typography>
+        </Box>
 
+        <Container>
           <Grid container>
             <Grid item className={"item"} xl={10} lg={8} md={6} sm={12} xs={12}>
               <Cart />
@@ -51,12 +49,11 @@ export default function CheckOut() {
 
         <Box
           style={{
-            width: "90%",
+            width: "80vw",
             display: "flex",
             justifyContent: "space-between",
             padding: "10px 10px",
             marginTop: "20px",
-            marginBottom: "20px",
             backgroundColor: "#EEE4E3",
           }}
           className="heading"

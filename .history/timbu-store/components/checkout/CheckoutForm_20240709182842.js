@@ -36,7 +36,7 @@ export default function CheckoutForm() {
   return (
     <form onSubmit={handleSubmit}>
       <Stack spacing={4} direction={"column"}>
-        <Stack spacing={2}>
+        <Stack>
           <Box sx={{ backgroundColor: "#EEE4E3", padding: "10px 15px" }}>
             <Typography>Delivery</Typography>
           </Box>
@@ -83,7 +83,7 @@ export default function CheckoutForm() {
           />
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack>
           <Box sx={{ backgroundColor: "#EEE4E3", padding: "10px 15px" }}>
             <Typography>Payment</Typography>
           </Box>

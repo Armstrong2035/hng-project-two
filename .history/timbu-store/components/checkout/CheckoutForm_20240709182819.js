@@ -36,7 +36,7 @@ export default function CheckoutForm() {
   return (
     <form onSubmit={handleSubmit}>
       <Stack spacing={4} direction={"column"}>
-        <Stack spacing={2}>
+        <Stack>
           <Box sx={{ backgroundColor: "#EEE4E3", padding: "10px 15px" }}>
             <Typography>Delivery</Typography>
           </Box>
@@ -83,54 +83,52 @@ export default function CheckoutForm() {
           />
         </Stack>
 
-        <Stack spacing={2}>
-          <Box sx={{ backgroundColor: "#EEE4E3", padding: "10px 15px" }}>
-            <Typography>Payment</Typography>
-          </Box>
+        <Box sx={{ backgroundColor: "#EEE4E3", padding: "10px 15px" }}>
+          <Typography>Payment</Typography>
+        </Box>
 
-          <TextField
-            label="Card Number"
-            name="cardNumber"
-            value={formData.cardNumber}
-            onChange={handleChange}
-            type="number"
-            inputProps={{ minLength: 16, maxLength: 19 }}
-            required
-          />
+        <TextField
+          label="Card Number"
+          name="cardNumber"
+          value={formData.cardNumber}
+          onChange={handleChange}
+          type="number"
+          inputProps={{ minLength: 16, maxLength: 19 }}
+          required
+        />
 
-          <TextField
-            label="CVV"
-            name="cvv"
-            value={formData.cvv}
-            onChange={handleChange}
-            type="password"
-            inputProps={{ minLength: 3, maxLength: 4 }}
-            required
-          />
+        <TextField
+          label="CVV"
+          name="cvv"
+          value={formData.cvv}
+          onChange={handleChange}
+          type="password"
+          inputProps={{ minLength: 3, maxLength: 4 }}
+          required
+        />
 
-          <TextField
-            label="Expiry Date (MM/YY)"
-            name="expiryDate"
-            value={formData.expiryDate}
-            onChange={handleChange}
-            helperText="Please enter in MM/YY format"
-            pattern="^(0[1-9]|1[0-2])\/\d{2}$"
-            required
-          />
+        <TextField
+          label="Expiry Date (MM/YY)"
+          name="expiryDate"
+          value={formData.expiryDate}
+          onChange={handleChange}
+          helperText="Please enter in MM/YY format"
+          pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+          required
+        />
 
-          <Button
-            variant="contained"
-            type="submit"
-            sx={{
-              backgroundColor: "#ED8174",
-              "&:hover": {
-                backgroundColor: "#C9675B",
-              },
-            }}
-          >
-            Submit
-          </Button>
-        </Stack>
+        <Button
+          variant="contained"
+          type="submit"
+          sx={{
+            backgroundColor: "#ED8174",
+            "&:hover": {
+              backgroundColor: "#C9675B",
+            },
+          }}
+        >
+          Submit
+        </Button>
       </Stack>
     </form>
   );

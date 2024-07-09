@@ -23,7 +23,6 @@ export default function CheckOut() {
     <>
       <Stack alignItems={"center"}>
         <Container>
-          <CheckoutNav />
           <Box
             style={{
               width: "100%",
@@ -38,7 +37,7 @@ export default function CheckOut() {
             <Typography>Order Summary</Typography>
             <Typography>Total</Typography>
           </Box>
-
+          <CheckoutNav />
           <Grid container>
             <Grid item className={"item"} xl={10} lg={8} md={6} sm={12} xs={12}>
               <Cart />

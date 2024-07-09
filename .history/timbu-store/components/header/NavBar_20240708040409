@@ -3,27 +3,6 @@ import React, { useState } from "react";
 import { AppBar, Tabs, Tab, Typography, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
-  tab: {
-    minWidth: 100,
-    fontWeight: 600,
-  },
-  indicator: {
-    backgroundColor: "#ED8174",
-  },
-}));
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
