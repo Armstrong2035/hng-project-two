@@ -21,7 +21,7 @@ import CartNav from "./CartNav";
 import Link from "next/link";
 import ProductRecommendations from "../../Products/ProductRecommendations";
 import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import useMediaQuery from "@mui/material";
 import { InstallDesktopOutlined } from "@mui/icons-material";
 import ProductRecommendationsMobile from "../../Products/ProductRecommendationsMobile";
 export default function CartPage() {

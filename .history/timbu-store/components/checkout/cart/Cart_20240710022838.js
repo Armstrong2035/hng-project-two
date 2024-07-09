@@ -49,11 +49,7 @@ export default function Cart() {
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
-            <Stack
-              direction={"row"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
+            <Stack>
               <Box sx={{ padding: "16px" }}>
                 <Typography>{item.productName}</Typography>
                 <Box

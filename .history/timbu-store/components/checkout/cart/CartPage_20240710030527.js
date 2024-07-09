@@ -20,10 +20,8 @@ import Header from "../../header/Header";
 import CartNav from "./CartNav";
 import Link from "next/link";
 import ProductRecommendations from "../../Products/ProductRecommendations";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { InstallDesktopOutlined } from "@mui/icons-material";
-import ProductRecommendationsMobile from "../../Products/ProductRecommendationsMobile";
+import useTheme from "@mui/material";
+import useMediaQuery from "@mui/material";
 export default function CartPage() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
@@ -98,11 +96,8 @@ export default function CartPage() {
             </Stack>
           </Grid>
         </Grid>
-        {isDesktop ? (
-          <ProductRecommendations />
-        ) : (
-          <ProductRecommendationsMobile />
-        )}
+        {isDe}
+        <ProductRecommendations />
       </Container>
     </>
   );

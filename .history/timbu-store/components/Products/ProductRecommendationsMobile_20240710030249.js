@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { inventory } from "@/products";
 import Carousel from "react-material-ui-carousel";
 import {
@@ -16,28 +17,19 @@ import React from "react";
 import useTheme from "@mui/material";
 import useMediaQuery from "@mui/material";
 
-export default function ProductRecommendations() {
+export default function ProductRecommendationsMobile() {
   const recommendations = inventory.slice(0, 4);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
 
   return (
-    <Stack alignItems={"center"} sx={{ paddingTop: "50px" }}>
-      <Typography sx={{ alignSelf: "flex-start" }}>
-        You may also like
-      </Typography>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        {recommendations.map((product, index) => (
+    <>
+      <Carousel>
+        {recommendations.map((product) => (
           <Box
             key={product.productName}
             sx={{
-              margin: "10px 10px",
+              margin: "10px",
             }}
           >
             <Stack direction={"column"} spacing={2}>
@@ -54,7 +46,6 @@ export default function ProductRecommendations() {
                     "&:hover .add-to-cart": {
                       opacity: 1,
                     },
-
                     "&:hover": {
                       backgroundColor: "#E6DFDF",
                     },
@@ -142,7 +133,7 @@ export default function ProductRecommendations() {
             </Stack>
           </Box>
         ))}
-      </Box>
-    </Stack>
+      </Carousel>
+    </>
   );
 }

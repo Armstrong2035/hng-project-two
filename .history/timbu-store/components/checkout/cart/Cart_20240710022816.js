@@ -49,52 +49,46 @@ export default function Cart() {
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
-            <Stack
-              direction={"row"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
-              <Box sx={{ padding: "16px" }}>
-                <Typography>{item.productName}</Typography>
-                <Box
-                  sx={{
-                    border: "1px solid #B2A6A6",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    margin: "10px 0",
-                  }}
-                >
-                  <Button
-                    sx={{ color: "#473838" }}
-                    onClick={() =>
-                      setOrderVolume(orderVolume > 1 ? orderVolume - 1 : 1)
-                    }
-                  >
-                    -
-                  </Button>
-                  <Typography sx={{ padding: "0 10px" }}>
-                    {orderVolume}
-                  </Typography>
-                  <Button
-                    sx={{ color: "#473838" }}
-                    onClick={() => setOrderVolume(orderVolume + 1)}
-                  >
-                    +
-                  </Button>
-                </Box>
-                <Button sx={{ color: "#ED8174" }}>Remove</Button>
-              </Box>
-              <Typography
+            <Box sx={{ padding: "16px" }}>
+              <Typography>{item.productName}</Typography>
+              <Box
                 sx={{
-                  textAlign: { xs: "right", md: "left" },
-                  marginRight: { xs: "16px", md: "0" },
-                  marginTop: { xs: "16px", md: "0" },
+                  border: "1px solid #B2A6A6",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  margin: "10px 0",
                 }}
               >
-                {item.discountPrice}
-              </Typography>
-            </Stack>
+                <Button
+                  sx={{ color: "#473838" }}
+                  onClick={() =>
+                    setOrderVolume(orderVolume > 1 ? orderVolume - 1 : 1)
+                  }
+                >
+                  -
+                </Button>
+                <Typography sx={{ padding: "0 10px" }}>
+                  {orderVolume}
+                </Typography>
+                <Button
+                  sx={{ color: "#473838" }}
+                  onClick={() => setOrderVolume(orderVolume + 1)}
+                >
+                  +
+                </Button>
+              </Box>
+              <Button sx={{ color: "#ED8174" }}>Remove</Button>
+            </Box>
+            <Typography
+              sx={{
+                textAlign: { xs: "right", md: "left" },
+                marginRight: { xs: "16px", md: "0" },
+                marginTop: { xs: "16px", md: "0" },
+              }}
+            >
+              {item.discountPrice}
+            </Typography>
           </Grid>
 
           <Grid item xs={12} md={4}></Grid>

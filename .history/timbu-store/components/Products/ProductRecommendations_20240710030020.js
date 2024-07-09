@@ -19,6 +19,9 @@ import useMediaQuery from "@mui/material";
 export default function ProductRecommendations() {
   const recommendations = inventory.slice(0, 4);
 
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
+
   return (
     <Stack alignItems={"center"} sx={{ paddingTop: "50px" }}>
       <Typography sx={{ alignSelf: "flex-start" }}>

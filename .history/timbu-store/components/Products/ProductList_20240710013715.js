@@ -48,7 +48,14 @@ export default function ProductList() {
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Grid container spacing={3}>
               {inventory.map((product, index) => (
-                <Grid item xs={12} sm={12} md={4} lg={3}>
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  lg={3}
+                  key={product.productName}
+                >
                   <Stack direction={"column"} spacing={2}>
                     <Link
                       href={`/product/${encodeURIComponent(
@@ -57,78 +64,82 @@ export default function ProductList() {
                     >
                       <Box
                         sx={{
-                          flex: 1,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          backgroundColor: "#F1F0F0",
                           position: "relative",
-                          "&:hover .add-to-cart": {
-                            opacity: 1,
-                          },
-
+                          width: "100%",
+                          paddingTop: "100%", // This creates a 1:1 aspect ratio
+                          backgroundColor: "#F1F0F0",
                           "&:hover": {
                             backgroundColor: "#E6DFDF",
                           },
-
-                          height: "18.125rem",
-                          padding: "1.875rem 1.875rem",
                         }}
-                        elevation={"none"}
                       >
-                        <Chip
-                          label={"sale"}
-                          sx={{
-                            position: "absolute",
-                            top: "0",
-                            left: "0",
-                            borderRadius: "0",
-                            backgroundColor: "#EEE4E3",
-                          }}
-                        />
-
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            position: "relative",
-                            padding: "10px",
-                          }}
-                        >
-                          <Image
-                            src={product.imageUrl}
-                            alt={product.productName}
-                            layout="fill"
-                            objectFit="contain"
-                          />
-                        </div>
-
                         <Box
-                          className="add-to-cart"
                           sx={{
-                            backgroundColor: "#ED8174",
-                            color: "white",
                             position: "absolute",
+                            top: 0,
+                            left: 0,
+                            right: 0,
                             bottom: 0,
-                            width: "100%",
-                            height: "50px",
                             display: "flex",
-                            justifyContent: "center",
                             alignItems: "center",
-                            opacity: 0,
-                            transition: "opacity 0.3s",
-                            cursor: "pointer",
-                            "&:hover": {
-                              backgroundColor: "#C9675B",
-                            },
-                          }}
-                          onClick={(e) => {
-                            e.stopPropagation(); // Prevent event from bubbling up to the Link
-                            e.preventDefault(); // Prevent the default link behavior
-                            addToCart(product);
+                            justifyContent: "center",
+                            padding: "5%", // Use percentage-based padding
                           }}
                         >
-                          Add To Cart
+                          <Chip
+                            label={"sale"}
+                            sx={{
+                              position: "absolute",
+                              top: "0",
+                              left: "0",
+                              borderRadius: "0",
+                              backgroundColor: "#EEE4E3",
+                            }}
+                          />
+
+                          <div
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              position: "relative",
+                              padding: "10px",
+                            }}
+                          >
+                            <Image
+                              src={product.imageUrl}
+                              alt={product.productName}
+                              layout="fill"
+                              objectFit="contain"
+                            />
+                          </div>
+
+                          <Box
+                            className="add-to-cart"
+                            sx={{
+                              backgroundColor: "#ED8174",
+                              color: "white",
+                              position: "absolute",
+                              bottom: 0,
+                              width: "100%",
+                              height: "50px",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              opacity: 0,
+                              transition: "opacity 0.3s",
+                              cursor: "pointer",
+                              "&:hover": {
+                                backgroundColor: "#C9675B",
+                              },
+                            }}
+                            onClick={(e) => {
+                              e.stopPropagation(); // Prevent event from bubbling up to the Link
+                              e.preventDefault(); // Prevent the default link behavior
+                              addToCart(product);
+                            }}
+                          >
+                            Add To Cart
+                          </Box>
                         </Box>
                       </Box>
                     </Link>

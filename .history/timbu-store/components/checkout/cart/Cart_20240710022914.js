@@ -52,7 +52,7 @@ export default function Cart() {
             <Stack
               direction={"row"}
               alignItems={"center"}
-              justifyContent={"space-between"}
+              justifyContent={"center"}
             >
               <Box sx={{ padding: "16px" }}>
                 <Typography>{item.productName}</Typography>

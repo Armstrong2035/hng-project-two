@@ -13,8 +13,6 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import useTheme from "@mui/material";
-import useMediaQuery from "@mui/material";
 
 export default function ProductRecommendations() {
   const recommendations = inventory.slice(0, 4);
