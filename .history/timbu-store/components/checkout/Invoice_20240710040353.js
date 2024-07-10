@@ -40,7 +40,7 @@ export default function Invoice() {
   });
 
   return (
-    <Stack spacing={isDesktop ? 8 : 4}>
+    <Stack spacing={isDesktop ? "8" : "5"}>
       <TextField
         variant="outlined"
         label="Discount"

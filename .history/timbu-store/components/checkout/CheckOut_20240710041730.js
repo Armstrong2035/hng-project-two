@@ -77,8 +77,9 @@ export default function CheckOut() {
               backgroundColor: "#EEE4E3",
             }}
           />
-          <CheckoutForm />
         </Container>
+
+        <CheckoutForm />
       </Stack>
     </>
   );

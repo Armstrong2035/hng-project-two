@@ -19,7 +19,7 @@ import Promotion from "../header/Promotion";
 import CheckoutForm from "./CheckoutForm";
 import CheckoutNav from "./CheckoutNav";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 export default function CheckOut() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
@@ -38,6 +38,7 @@ export default function CheckOut() {
                 marginTop: "20px",
                 backgroundColor: "#EEE4E3",
               }}
+              className="heading"
             >
               <Typography>Order Summary</Typography>
               <Typography>Total</Typography>
@@ -45,22 +46,6 @@ export default function CheckOut() {
           )}
 
           <Grid container>
-            <Grid item sm={12} sx={{ width: "94%" }}>
-              {!isDesktop && (
-                <Stack
-                  direction={"row"}
-                  justifyContent={"space-between"}
-                  sx={{
-                    backgroundColor: "#EEE4E3",
-                    padding: "10px 10px",
-                    width: "100%",
-                  }}
-                >
-                  <Typography>Order Summary</Typography>
-                  <Typography>Total</Typography>
-                </Stack>
-              )}
-            </Grid>
             <Grid item className={"item"} xl={10} lg={8} md={6} sm={12} xs={12}>
               <Cart />
             </Grid>
@@ -68,17 +53,22 @@ export default function CheckOut() {
               <Invoice />
             </Grid>
           </Grid>
-          <Box
-            style={{
-              width: "100%",
-
-              marginTop: "20px",
-              marginBottom: "20px",
-              backgroundColor: "#EEE4E3",
-            }}
-          />
-          <CheckoutForm />
         </Container>
+
+        <Box
+          style={{
+            width: "90%",
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "10px 10px",
+            marginTop: "20px",
+            marginBottom: "20px",
+            backgroundColor: "#EEE4E3",
+          }}
+          className="heading"
+        ></Box>
+
+        <CheckoutForm />
       </Stack>
     </>
   );

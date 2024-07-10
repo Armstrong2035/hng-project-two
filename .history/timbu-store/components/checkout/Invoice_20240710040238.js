@@ -9,13 +9,9 @@ import {
   Stack,
 } from "@mui/material";
 import useStore from "@/store/store";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Invoice() {
   const cart = useStore((state) => state.cart);
-  const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
 
   const [discountCode, setDiscountCode] = useState("");
   const [shippingMode, setShippingMode] = useState("Home Delivery");
@@ -40,7 +36,7 @@ export default function Invoice() {
   });
 
   return (
-    <Stack spacing={isDesktop ? 8 : 4}>
+    <Stack spacing={4}>
       <TextField
         variant="outlined"
         label="Discount"

@@ -38,6 +38,7 @@ export default function CheckOut() {
                 marginTop: "20px",
                 backgroundColor: "#EEE4E3",
               }}
+              className="heading"
             >
               <Typography>Order Summary</Typography>
               <Typography>Total</Typography>
@@ -45,20 +46,13 @@ export default function CheckOut() {
           )}
 
           <Grid container>
-            <Grid item sm={12} sx={{ width: "94%" }}>
+            <Grid item>
               {!isDesktop && (
-                <Stack
-                  direction={"row"}
-                  justifyContent={"space-between"}
-                  sx={{
-                    backgroundColor: "#EEE4E3",
-                    padding: "10px 10px",
-                    width: "100%",
-                  }}
+                <Typography
+                  sx={{ backgroundColor: "#EEE4E3", padding: "10px 10px" }}
                 >
-                  <Typography>Order Summary</Typography>
-                  <Typography>Total</Typography>
-                </Stack>
+                  Order Summary
+                </Typography>
               )}
             </Grid>
             <Grid item className={"item"} xl={10} lg={8} md={6} sm={12} xs={12}>
@@ -68,17 +62,22 @@ export default function CheckOut() {
               <Invoice />
             </Grid>
           </Grid>
-          <Box
-            style={{
-              width: "100%",
-
-              marginTop: "20px",
-              marginBottom: "20px",
-              backgroundColor: "#EEE4E3",
-            }}
-          />
-          <CheckoutForm />
         </Container>
+
+        <Box
+          style={{
+            width: "90%",
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "10px 10px",
+            marginTop: "20px",
+            marginBottom: "20px",
+            backgroundColor: "#EEE4E3",
+          }}
+          className="heading"
+        ></Box>
+
+        <CheckoutForm />
       </Stack>
     </>
   );

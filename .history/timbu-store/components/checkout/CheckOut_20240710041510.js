@@ -68,17 +68,22 @@ export default function CheckOut() {
               <Invoice />
             </Grid>
           </Grid>
-          <Box
-            style={{
-              width: "100%",
-
-              marginTop: "20px",
-              marginBottom: "20px",
-              backgroundColor: "#EEE4E3",
-            }}
-          />
-          <CheckoutForm />
         </Container>
+
+        <Box
+          style={{
+            width: "90%",
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "10px 10px",
+            marginTop: "20px",
+            marginBottom: "20px",
+            backgroundColor: "#EEE4E3",
+          }}
+          className="heading"
+        ></Box>
+
+        <CheckoutForm />
       </Stack>
     </>
   );
