@@ -31,7 +31,7 @@ export default function CartPage() {
     <>
       <Container>
         <CartNav />
-        <Grid container alignItems={"center"} justifyContent={"center"}>
+        <Grid container alignItems={"center"}>
           <Grid item className={"item"} xl={10} lg={8} md={6} sm={12} xs={12}>
             <Cart />
           </Grid>

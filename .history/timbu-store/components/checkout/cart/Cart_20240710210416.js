@@ -79,13 +79,12 @@ export default function Cart() {
               alignItems={"center"}
               justifyContent={"space-between"}
             > */}
-            <Grid container justifyContent={"center"} alignItems={"center"}>
-              <Grid item sm={12} xs={12} lg={8}>
+            <Grid container>
+              <Grid item sm={12} xs={12}>
                 <Box
                   sx={{
                     padding: "16px",
                     display: "flex",
-                    flexDirection: "column",
                     alignItems: "center",
                   }}
                 >
@@ -120,7 +119,7 @@ export default function Cart() {
                   <Button sx={{ color: "#ED8174" }}>Remove</Button>
                 </Box>
               </Grid>
-              <Grid item sm={12} xs={12} lg={4}>
+              <Grid item sm={12} xs={12}>
                 <Box>
                   <Typography
                     sx={{

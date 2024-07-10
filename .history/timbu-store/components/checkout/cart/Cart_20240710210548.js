@@ -79,7 +79,7 @@ export default function Cart() {
               alignItems={"center"}
               justifyContent={"space-between"}
             > */}
-            <Grid container justifyContent={"center"} alignItems={"center"}>
+            <Grid container justifyContent={"center"}>
               <Grid item sm={12} xs={12} lg={8}>
                 <Box
                   sx={{
