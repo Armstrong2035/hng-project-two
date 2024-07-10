@@ -91,7 +91,6 @@ export default function ProductList() {
                             left: "0",
                             borderRadius: "0",
                             backgroundColor: "#EEE4E3",
-                            padding: "5px 5px",
                           }}
                         />
 

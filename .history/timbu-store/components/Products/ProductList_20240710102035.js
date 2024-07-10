@@ -91,7 +91,6 @@ export default function ProductList() {
                             left: "0",
                             borderRadius: "0",
                             backgroundColor: "#EEE4E3",
-                            padding: "5px 5px",
                           }}
                         />
 
@@ -143,7 +142,7 @@ export default function ProductList() {
                               fontStyle: "normal",
                               fontSize: "18px",
                               lingHeight: "26px",
-                              color: "#FFFFFF",
+                              color: "#473838",
                             }}
                           >
                             Add To Cart

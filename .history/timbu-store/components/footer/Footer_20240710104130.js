@@ -25,14 +25,6 @@ function Footer() {
     lingHeight: "26px",
     color: "#473838",
   };
-  const font2 = {
-    fontFamily: "Kanit sans-serif",
-    fontWeight: "400",
-    fontStyle: "normal",
-    fontSize: "24px",
-    lingHeight: "32px",
-    color: "#473838",
-  };
   return (
     <>
       <TimbuStore />
@@ -46,7 +38,7 @@ function Footer() {
         <Grid container>
           <Grid item sm={12} lg={6}>
             <Stack>
-              <Typography variant="h5" gutterBottom sx={font2}>
+              <Typography variant="h5" gutterBottom>
                 Join our Family
               </Typography>
               <Typography variant="body1" paragraph sx={font1}>
@@ -61,9 +53,7 @@ function Footer() {
             <Grid container direction={isDesktop ? "row" : "column"}>
               <Grid item sm={12} lg={4}>
                 <Stack>
-                  <Typography variant={"h5"} sx={font2}>
-                    Shop
-                  </Typography>
+                  <Typography variant={"h5"}>Shop</Typography>
                   <Typography sx={font1}>Skincare</Typography>
                   <Typography sx={font1}>Sets and Kits</Typography>
                   <Typography sx={font1}>Make up</Typography>
@@ -72,22 +62,18 @@ function Footer() {
               </Grid>
               <Grid item sm={12} lg={4}>
                 <Stack>
-                  <Typography variant={"h5"} sx={font2}>
-                    Help
-                  </Typography>
-                  <Typography sx={font1}>FAQ</Typography>
-                  <Typography sx={font1}>Shipping</Typography>
-                  <Typography sx={font1}>Refunds</Typography>
+                  <Typography variant={"h5"}>Help</Typography>
+                  <Typography>FAQ</Typography>
+                  <Typography>Shipping</Typography>
+                  <Typography>Refunds</Typography>
                 </Stack>
               </Grid>
               <Grid item sm={12} lg={4}>
                 <Stack>
-                  <Typography variant={"h5"} sx={font2}>
-                    Learn
-                  </Typography>
-                  <Typography sx={font1}>About us</Typography>
-                  <Typography sx={font1}>Career</Typography>
-                  <Typography sx={font1}>Blog</Typography>
+                  <Typography variant={"h5"}>Learn</Typography>
+                  <Typography>About us</Typography>
+                  <Typography>Career</Typography>
+                  <Typography>Blog</Typography>
                 </Stack>
               </Grid>
             </Grid>

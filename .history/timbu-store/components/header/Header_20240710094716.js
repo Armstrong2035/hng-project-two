@@ -58,16 +58,7 @@ export default function Header() {
                 >
                   Radiant beauty for every skin glow
                 </Typography>
-                <Typography
-                  variant={"h5"}
-                  sx={{
-                    fontFamily: "Kanit sans-serif",
-                    fontWeight: "400",
-                    fontStyle: "normal",
-                    fontSize: "18px",
-                    lingHeight: "32px",
-                  }}
-                >
+                <Typography variant={"h6"}>
                   Inclusive skincare for every complexion, from light to deep
                 </Typography>
               </Box>

@@ -91,7 +91,6 @@ export default function ProductList() {
                             left: "0",
                             borderRadius: "0",
                             backgroundColor: "#EEE4E3",
-                            padding: "5px 5px",
                           }}
                         />
 
@@ -136,18 +135,7 @@ export default function ProductList() {
                             addToCart(product);
                           }}
                         >
-                          <Typography
-                            sx={{
-                              fontFamily: "Kanit sans-serif",
-                              fontWeight: "400",
-                              fontStyle: "normal",
-                              fontSize: "18px",
-                              lingHeight: "26px",
-                              color: "#FFFFFF",
-                            }}
-                          >
-                            Add To Cart
-                          </Typography>
+                          Add To Cart
                         </Box>
                       </Box>
                     </Link>
@@ -173,20 +161,6 @@ export default function ProductList() {
                           }}
                         >{`${product.productName}`}</Typography>
                         <Stack spacing={2} direction={"row"}>
-                          <s>
-                            <Typography
-                              variant={"h5"}
-                              sx={{
-                                fontFamily: "Kanit sans-serif",
-                                fontWeight: "400",
-                                fontStyle: "normal",
-                                fontSize: "24px",
-                                lingHeight: "32px",
-                                color: "#473838",
-                              }}
-                            >{`${product.price}`}</Typography>
-                          </s>
-
                           <Typography
                             variant={"h5"}
                             sx={{
@@ -194,9 +168,22 @@ export default function ProductList() {
                               fontWeight: "400",
                               fontStyle: "normal",
                               fontSize: "24px",
-                              lineHeight: "26px",
-                              color: "#F7AFBC",
+                              lingHeight: "32px",
+                              color: "#473838",
                             }}
+                          >{`${product.price}`}</Typography>
+
+                          <Typography
+                            variant={"h5"}
+                            sx={{
+                              fontFamily: "Kanit sans-serif",
+                              fontWeight: "400",
+                              fontStyle: "normal",
+                              fontSize: "18px",
+                              lingHeight: "26px",
+                              color: "#F7AFB",
+                            }}
+                            // sx={{ color: "#F7AFBC" }}
                           >{`${product.discountPrice}`}</Typography>
                         </Stack>
                       </Stack>

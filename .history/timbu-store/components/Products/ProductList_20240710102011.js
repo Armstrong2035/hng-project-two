@@ -91,7 +91,6 @@ export default function ProductList() {
                             left: "0",
                             borderRadius: "0",
                             backgroundColor: "#EEE4E3",
-                            padding: "5px 5px",
                           }}
                         />
 
@@ -136,18 +135,7 @@ export default function ProductList() {
                             addToCart(product);
                           }}
                         >
-                          <Typography
-                            sx={{
-                              fontFamily: "Kanit sans-serif",
-                              fontWeight: "400",
-                              fontStyle: "normal",
-                              fontSize: "18px",
-                              lingHeight: "26px",
-                              color: "#FFFFFF",
-                            }}
-                          >
-                            Add To Cart
-                          </Typography>
+                          <Typography>Add To Cart</Typography>
                         </Box>
                       </Box>
                     </Link>
@@ -194,7 +182,7 @@ export default function ProductList() {
                               fontWeight: "400",
                               fontStyle: "normal",
                               fontSize: "24px",
-                              lineHeight: "26px",
+                              lingHeight: "26px",
                               color: "#F7AFBC",
                             }}
                           >{`${product.discountPrice}`}</Typography>

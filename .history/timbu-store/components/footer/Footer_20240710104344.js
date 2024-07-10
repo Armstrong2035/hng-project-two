@@ -25,7 +25,7 @@ function Footer() {
     lingHeight: "26px",
     color: "#473838",
   };
-  const font2 = {
+  const font1 = {
     fontFamily: "Kanit sans-serif",
     fontWeight: "400",
     fontStyle: "normal",
@@ -46,7 +46,7 @@ function Footer() {
         <Grid container>
           <Grid item sm={12} lg={6}>
             <Stack>
-              <Typography variant="h5" gutterBottom sx={font2}>
+              <Typography variant="h5" gutterBottom>
                 Join our Family
               </Typography>
               <Typography variant="body1" paragraph sx={font1}>
@@ -61,9 +61,7 @@ function Footer() {
             <Grid container direction={isDesktop ? "row" : "column"}>
               <Grid item sm={12} lg={4}>
                 <Stack>
-                  <Typography variant={"h5"} sx={font2}>
-                    Shop
-                  </Typography>
+                  <Typography variant={"h5"}>Shop</Typography>
                   <Typography sx={font1}>Skincare</Typography>
                   <Typography sx={font1}>Sets and Kits</Typography>
                   <Typography sx={font1}>Make up</Typography>
@@ -72,9 +70,7 @@ function Footer() {
               </Grid>
               <Grid item sm={12} lg={4}>
                 <Stack>
-                  <Typography variant={"h5"} sx={font2}>
-                    Help
-                  </Typography>
+                  <Typography variant={"h5"}>Help</Typography>
                   <Typography sx={font1}>FAQ</Typography>
                   <Typography sx={font1}>Shipping</Typography>
                   <Typography sx={font1}>Refunds</Typography>
@@ -82,9 +78,7 @@ function Footer() {
               </Grid>
               <Grid item sm={12} lg={4}>
                 <Stack>
-                  <Typography variant={"h5"} sx={font2}>
-                    Learn
-                  </Typography>
+                  <Typography variant={"h5"}>Learn</Typography>
                   <Typography sx={font1}>About us</Typography>
                   <Typography sx={font1}>Career</Typography>
                   <Typography sx={font1}>Blog</Typography>
