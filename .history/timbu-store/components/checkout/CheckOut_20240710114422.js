@@ -40,14 +40,6 @@ export default function CheckOut() {
     lingHeight: "32px",
     color: "#473838",
   };
-
-  const font3 = {
-    fontFamily: "Kanit sans-serif",
-    fontWeight: "400",
-    fontStyle: "normal",
-    fontSize: "18px",
-    lineHeight: "32px",
-  };
   return (
     <>
       <Stack alignItems={"center"}>
@@ -64,8 +56,8 @@ export default function CheckOut() {
                 backgroundColor: "#EEE4E3",
               }}
             >
-              <Typography sx={font1}>Order Summary</Typography>
-              <Typography sx={font1}>Total</Typography>
+              <Typography>Order Summary</Typography>
+              <Typography>Total</Typography>
             </Box>
           )}
 

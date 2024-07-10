@@ -7,7 +7,6 @@ import Image from "next/image";
 export default function Cart() {
   const [orderVolume, setOrderVolume] = useState(1);
   const cart = useStore((state) => state.cart);
-  console.log(cart);
 
   const font1 = {
     fontFamily: "Kanit",
@@ -39,10 +38,9 @@ export default function Cart() {
     <Stack spacing={4}>
       {cart.map((item) => (
         <Grid container key={item.id} spacing={2}>
-          <Grid item xs={12} sm={12} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Box
               sx={{
-                flex: 1,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -51,36 +49,39 @@ export default function Cart() {
                 "&:hover": {
                   backgroundColor: "#E6DFDF",
                 },
-                height: "18.125rem",
-                padding: "1.875rem 1.875rem",
+                width: "100%",
+                paddingTop: "100%", // This creates a square aspect ratio
+                position: "relative",
               }}
-              elevation={"none"}
             >
               <Box
                 sx={{
-                  width: "100%",
-                  height: "100%",
-                  position: "relative",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  padding: "10px",
                 }}
               >
                 <Image
-                  src={item.imageUrl.src}
-                  alt={`${item.productName}`}
+                  src={item.imageUrl}
+                  alt={item.productName}
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </Box>
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={4} lg={6}>
+          <Grid item xs={12} sm={6} md={4}>
             <Stack
               direction={"row"}
               alignItems={"center"}
               justifyContent={"space-between"}
             >
               <Box sx={{ padding: "16px" }}>
-                <Typography sx={font2}>{item.productName}</Typography>
+                <Typography>{item.productName}</Typography>
                 <Box
                   sx={{
                     border: "1px solid #B2A6A6",
@@ -98,7 +99,7 @@ export default function Cart() {
                   >
                     -
                   </Button>
-                  <Typography sx={{ padding: "0 10px" }} style={font2}>
+                  <Typography sx={{ padding: "0 10px" }}>
                     {orderVolume}
                   </Typography>
                   <Button
@@ -110,18 +111,15 @@ export default function Cart() {
                 </Box>
                 <Button sx={{ color: "#ED8174" }}>Remove</Button>
               </Box>
-              <Box>
-                <Typography
-                  sx={{
-                    textAlign: { xs: "right", md: "left" },
-                    marginRight: { xs: "16px", md: "0" },
-                    marginTop: { xs: "16px", md: "0" },
-                  }}
-                  style={font1}
-                >
-                  {item.discountPrice}
-                </Typography>
-              </Box>
+              <Typography
+                sx={{
+                  textAlign: { xs: "right", md: "left" },
+                  marginRight: { xs: "16px", md: "0" },
+                  marginTop: { xs: "16px", md: "0" },
+                }}
+              >
+                {item.discountPrice}
+              </Typography>
             </Stack>
           </Grid>
 

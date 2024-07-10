@@ -40,14 +40,6 @@ export default function CheckOut() {
     lingHeight: "32px",
     color: "#473838",
   };
-
-  const font3 = {
-    fontFamily: "Kanit sans-serif",
-    fontWeight: "400",
-    fontStyle: "normal",
-    fontSize: "18px",
-    lineHeight: "32px",
-  };
   return (
     <>
       <Stack alignItems={"center"}>

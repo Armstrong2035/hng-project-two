@@ -42,25 +42,25 @@ export default function Cart() {
           <Grid item xs={12} sm={12} md={4}>
             <Box
               sx={{
-                flex: 1,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#F1F0F0",
                 position: "relative",
+                width: "100%",
+                paddingTop: "100%", // This creates a square aspect ratio
+                backgroundColor: "#F1F0F0",
                 "&:hover": {
                   backgroundColor: "#E6DFDF",
                 },
-                height: "18.125rem",
-                padding: "1.875rem 1.875rem",
               }}
-              elevation={"none"}
             >
               <Box
                 sx={{
-                  width: "100%",
-                  height: "100%",
-                  position: "relative",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <Image

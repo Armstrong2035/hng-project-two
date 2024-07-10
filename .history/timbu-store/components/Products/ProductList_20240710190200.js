@@ -97,14 +97,14 @@ export default function ProductList() {
 
                         <Box
                           sx={{
-                            width: "100%",
-                            height: "100%",
+                            width: { "100%" },
+                            height: { '100%' },
                             position: "relative",
                           }}
                         >
                           <Image
                             src={product.imageUrl}
-                            alt={`${product.productName}`}
+                            alt="logo"
                             layout="fill"
                             objectFit="cover"
                           />

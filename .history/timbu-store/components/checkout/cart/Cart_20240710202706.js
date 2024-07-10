@@ -40,37 +40,36 @@ export default function Cart() {
       {cart.map((item) => (
         <Grid container key={item.id} spacing={2}>
           <Grid item xs={12} sm={12} md={4}>
-            <Box
-              sx={{
-                flex: 1,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#F1F0F0",
-                position: "relative",
-                "&:hover": {
-                  backgroundColor: "#E6DFDF",
-                },
-                height: "18.125rem",
-                padding: "1.875rem 1.875rem",
-              }}
-              elevation={"none"}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  position: "relative",
-                }}
-              >
-                <Image
-                  src={item.imageUrl.src}
-                  alt={`${item.productName}`}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </Box>
-            </Box>
+          <Box
+    sx={{
+      flex: 1,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#F1F0F0",
+      position: "relative",
+      "&:hover": {
+        backgroundColor: "#E6DFDF",
+      },
+      height: "18.125rem",
+      padding: "1.875rem 1.875rem",
+    }}
+    elevation={"none"}
+  >
+    <Box
+      sx={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+      }}
+    >
+      <Image
+        src={item.imageUrl.src}
+        alt={`${item.productName}`}
+        layout="fill"
+        objectFit="cover"
+      />
+    </Box>
           </Grid>
 
           <Grid item xs={12} sm={12} md={4} lg={6}>

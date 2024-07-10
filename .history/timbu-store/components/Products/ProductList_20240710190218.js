@@ -104,7 +104,7 @@ export default function ProductList() {
                         >
                           <Image
                             src={product.imageUrl}
-                            alt={`${product.productName}`}
+                            alt="logo"
                             layout="fill"
                             objectFit="cover"
                           />

@@ -57,7 +57,6 @@ export default function Header() {
                     fontWeight: "600",
                     fontStyle: "normal",
                     fontSize: "44px",
-                    lineHeight: "52px",
                   }}
                 >
                   Radiant beauty for every skin glow

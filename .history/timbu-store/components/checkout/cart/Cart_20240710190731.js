@@ -7,7 +7,6 @@ import Image from "next/image";
 export default function Cart() {
   const [orderVolume, setOrderVolume] = useState(1);
   const cart = useStore((state) => state.cart);
-  console.log(cart);
 
   const font1 = {
     fontFamily: "Kanit",
@@ -42,7 +41,6 @@ export default function Cart() {
           <Grid item xs={12} sm={12} md={4}>
             <Box
               sx={{
-                flex: 1,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -51,23 +49,26 @@ export default function Cart() {
                 "&:hover": {
                   backgroundColor: "#E6DFDF",
                 },
-                height: "18.125rem",
-                padding: "1.875rem 1.875rem",
+                width: "100%",
+                paddingTop: "100%", // This creates a square aspect ratio
+                position: "relative",
               }}
-              elevation={"none"}
             >
               <Box
                 sx={{
-                  width: "100%",
-                  height: "100%",
-                  position: "relative",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  padding: "10px",
                 }}
               >
                 <Image
-                  src={item.imageUrl.src}
-                  alt={`${item.productName}`}
+                  src={item.imageUrl}
+                  alt={item.productName}
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </Box>
             </Box>

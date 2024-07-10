@@ -57,7 +57,6 @@ export default function Header() {
                     fontWeight: "600",
                     fontStyle: "normal",
                     fontSize: "44px",
-                    lineHeight: "52px",
                   }}
                 >
                   Radiant beauty for every skin glow
@@ -69,7 +68,7 @@ export default function Header() {
                     fontWeight: "400",
                     fontStyle: "normal",
                     fontSize: "18px",
-                    lineHeight: "32px",
+                    lingHeight: "32px",
                   }}
                 >
                   Inclusive skincare for every complexion, from light to deep

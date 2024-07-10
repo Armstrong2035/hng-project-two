@@ -42,7 +42,6 @@ export default function Cart() {
           <Grid item xs={12} sm={12} md={4}>
             <Box
               sx={{
-                flex: 1,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -51,10 +50,10 @@ export default function Cart() {
                 "&:hover": {
                   backgroundColor: "#E6DFDF",
                 },
-                height: "18.125rem",
-                padding: "1.875rem 1.875rem",
+                width: "100%",
+                paddingTop: "100%",
+                position: "relative",
               }}
-              elevation={"none"}
             >
               <Box
                 sx={{
@@ -64,7 +63,7 @@ export default function Cart() {
                 }}
               >
                 <Image
-                  src={item.imageUrl.src}
+                  src={item.imageUrl}
                   alt={`${item.productName}`}
                   layout="fill"
                   objectFit="cover"
