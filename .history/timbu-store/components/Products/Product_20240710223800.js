@@ -69,27 +69,25 @@ export default function Product({ product }) {
               "&:hover": {
                 backgroundColor: "#E6DFDF",
               },
-              width: "100%", // Changed from fixed width
-              paddingTop: "100%", // This creates a square aspect ratio
-              margin: { xs: "0 auto", lg: "0" }, // Center on small screens
-              maxWidth: { xs: "100%", sm: "506px" }, // Max width on larger screens
+              width: { xs: "100%", lg: "506px" },
+              height: { xs: "auto", lg: "618.29px" },
+
+              padding: "1.875rem 1.875rem",
             }}
             elevation={"none"}
           >
             <Box
               sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
+                width: "100%",
+                height: "100%",
+                position: "relative",
               }}
             >
               <Image
                 src={product.imageUrl}
                 alt={`${product.productName}`}
                 layout="fill"
-                objectFit="contain"
+                objectFit="cover"
               />
             </Box>
           </Box>

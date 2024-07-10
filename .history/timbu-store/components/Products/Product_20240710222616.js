@@ -18,7 +18,6 @@ import { ExpandMoreOutlined } from "@mui/icons-material";
 import ProductNav from "./ProductNav";
 import Image from "next/image";
 import ProductRecommendations from "./ProductRecommendations";
-import ProductRecommendationsMobile from "./ProductRecommendationsMobile";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
@@ -60,48 +59,12 @@ export default function Product({ product }) {
         <Grid item lg={6} md={6} sm={12} xs={12}>
           <Box
             sx={{
-              flex: 1,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: "#F1F0F0",
-              position: "relative",
-              "&:hover": {
-                backgroundColor: "#E6DFDF",
-              },
-              width: "100%", // Changed from fixed width
-              paddingTop: "100%", // This creates a square aspect ratio
-              margin: { xs: "0 auto", lg: "0" }, // Center on small screens
-              maxWidth: { xs: "100%", sm: "506px" }, // Max width on larger screens
-            }}
-            elevation={"none"}
-          >
-            <Box
-              sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-              }}
-            >
-              <Image
-                src={product.imageUrl}
-                alt={`${product.productName}`}
-                layout="fill"
-                objectFit="contain"
-              />
-            </Box>
-          </Box>
-          {/* <Box
-            sx={{
               width: { xs: "100%", lg: "506px" },
               height: { xs: "auto", lg: "618.29px" },
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               backgroundColor: "#F1F0F0",
-              border: "1px solid red",
             }}
           >
             <div style={{ width: "100%", height: "100%" }}>
@@ -112,7 +75,7 @@ export default function Product({ product }) {
                 objectFit="contain"
               />
             </div>
-          </Box> */}
+          </Box>
         </Grid>
         <Grid item lg={6} md={6} sm={12} xs={12}>
           <Stack spacing={5}>
