@@ -72,12 +72,12 @@ export default function CartPage() {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "12px 5px",
+
+                  padding: "12px",
                 }}
               >
-                <Typography ml={1}>Subtotal</Typography>
-                <Typography ml={1}>$500</Typography>
+                <Typography>Subtotal</Typography>
+                <Typography>$500</Typography>
               </Box>
               <Link href={"/checkout"}>
                 <Button

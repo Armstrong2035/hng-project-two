@@ -23,7 +23,7 @@ export default function ProductRecommendationsMobile() {
       <Typography sx={{ alignSelf: "flex-start", mb: 2 }}>
         You may also like
       </Typography>
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", maxWidth: 400 }}>
         <Carousel
           autoPlay={false}
           navButtonsAlwaysVisible

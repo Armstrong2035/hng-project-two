@@ -76,8 +76,8 @@ export default function CartPage() {
                   padding: "12px 5px",
                 }}
               >
-                <Typography ml={1}>Subtotal</Typography>
-                <Typography ml={1}>$500</Typography>
+                <Typography>Subtotal</Typography>
+                <Typography>$500</Typography>
               </Box>
               <Link href={"/checkout"}>
                 <Button

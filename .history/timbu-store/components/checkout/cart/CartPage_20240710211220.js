@@ -68,16 +68,16 @@ export default function CartPage() {
               <Box
                 sx={{
                   border: "1px solid grey",
-                  width: "100%",
+                  width: "324px",
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  padding: "12px 5px",
+                  padding: "12px",
                 }}
               >
-                <Typography ml={1}>Subtotal</Typography>
-                <Typography ml={1}>$500</Typography>
+                <Typography>Subtotal</Typography>
+                <Typography>$500</Typography>
               </Box>
               <Link href={"/checkout"}>
                 <Button

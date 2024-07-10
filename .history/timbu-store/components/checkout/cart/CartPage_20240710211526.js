@@ -77,7 +77,7 @@ export default function CartPage() {
                 }}
               >
                 <Typography ml={1}>Subtotal</Typography>
-                <Typography ml={1}>$500</Typography>
+                <Typography>$500</Typography>
               </Box>
               <Link href={"/checkout"}>
                 <Button
