@@ -31,11 +31,11 @@ export default function CartPage() {
     <>
       <Container>
         <CartNav />
-        <Grid container>
-          <Grid item className={"item"} xl={10} lg={8} md={6} sm={12} xs={12}>
+        <Grid container alignItems={"center"} justifyContent={"center"}>
+          <Grid item className={"item"} xl={6} lg={6} md={6} sm={12} xs={12}>
             <Cart />
           </Grid>
-          <Grid item xl={4} lg={4} md={6} sm={12} xs={12}>
+          <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
             <Stack spacing={5}>
               <Box
                 sx={{
