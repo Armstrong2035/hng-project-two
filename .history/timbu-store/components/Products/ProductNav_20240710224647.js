@@ -19,7 +19,7 @@ export default function ProductNav() {
         alignItems="center"
       >
         <Typography variant="h6">Product Details</Typography>
-        <Link href={"/cart"}>
+        <Link>
           <IconButton>
             <ShoppingCartIcon />
           </IconButton>

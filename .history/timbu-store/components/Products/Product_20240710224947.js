@@ -96,6 +96,26 @@ export default function Product({ product }) {
               />
             </Box>
           </Box>
+          {/* <Box
+            sx={{
+              width: { xs: "100%", lg: "506px" },
+              height: { xs: "auto", lg: "618.29px" },
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#F1F0F0",
+              border: "1px solid red",
+            }}
+          >
+            <div style={{ width: "100%", height: "100%" }}>
+              <Image
+                src={product.imageUrl}
+                alt={product.productName}
+                layout="responsive"
+                objectFit="contain"
+              />
+            </div>
+          </Box> */}
         </Grid>
         <Grid item lg={6} md={6} sm={12} xs={12}>
           <Stack spacing={5}>
