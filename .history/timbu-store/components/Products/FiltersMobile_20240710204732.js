@@ -4,7 +4,6 @@ import React from "react";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton, Stack } from "@mui/material";
-import Link from "next/link";
 
 export default function FiltersMobile() {
   return (
@@ -18,11 +17,9 @@ export default function FiltersMobile() {
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <Link href={"/cart"}>
-          <IconButton>
-            <ShoppingBagIcon />
-          </IconButton>
-        </Link>
+        <IconButton>
+          <ShoppingBagIcon />
+        </IconButton>
       </Stack>
     </>
   );

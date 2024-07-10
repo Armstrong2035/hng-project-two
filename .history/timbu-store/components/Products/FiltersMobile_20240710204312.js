@@ -2,27 +2,24 @@
 
 import React from "react";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import SearchIcon from "@mui/icons-material/Search";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { IconButton, Stack } from "@mui/material";
-import Link from "next/link";
 
-export default function FiltersMobile() {
+export default function CheckoutNav() {
   return (
     <>
       <Stack
         direction={"row"}
         alignItems="center"
-        justifyContent={"center"}
+        justifyContent={"space-between"}
         sx={{ width: "100%" }}
       >
         <IconButton>
-          <SearchIcon />
+          <ArrowBackIosNewIcon />
         </IconButton>
-        <Link href={"/cart"}>
-          <IconButton>
-            <ShoppingBagIcon />
-          </IconButton>
-        </Link>
+        <IconButton>
+          <ShoppingBagIcon />
+        </IconButton>
       </Stack>
     </>
   );

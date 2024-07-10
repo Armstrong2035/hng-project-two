@@ -9,7 +9,7 @@ import SimpleTabs from "./NavBar";
 import Filters from "../Products/Filters";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import NavMobile from "./NavMobile";
+import NavMobile from "../Products/NavMobile";
 
 export default function Header() {
   const theme = useTheme();
@@ -80,7 +80,7 @@ export default function Header() {
         </AppBar>
 
         {!isDesktop && (
-          <Box sx={{ width: "100%" }}>
+          <Box>
             <NavMobile />
           </Box>
         )}

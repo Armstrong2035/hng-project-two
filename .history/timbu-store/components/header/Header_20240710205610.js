@@ -80,7 +80,7 @@ export default function Header() {
         </AppBar>
 
         {!isDesktop && (
-          <Box sx={{ width: "100%" }}>
+          <Box>
             <NavMobile />
           </Box>
         )}
